@@ -33,7 +33,7 @@ function handleSubmitButtonClick(event) {
 }
 function removeEventListeners() {
     cancelButton.removeEventListener('click', handleCancelButtonClick);
-
+    submitButton.removeEventListener('click', handleSubmitButtonClick);
 }
 
 function formatDate(date) {
