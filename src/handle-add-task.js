@@ -26,6 +26,7 @@ function handleSubmitButtonClick(event) {
         let priorityInput = form.querySelector('#options');
         let descriptionInput = form.querySelector('.description-input');
         addTask(nameInput.value, formatDate(dueDateInput.value), priorityInput.value, descriptionInput.value);
+        removeEventListeners();
         inputDialog.close();
     } else {
         alert('Name and Due Date must be filled.')
