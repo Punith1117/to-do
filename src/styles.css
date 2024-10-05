@@ -1,0 +1,17 @@
+header {
+    background-color: rgb(135, 135, 175);
+    color: white;
+}
+
+.tab[data-on-this-tab="true"] {
+    background-color: green;
+    color: white;
+}
+
+.high-priority {
+    color: rgb(252, 55, 55);
+}
+
+.low-priority {
+    color: rgb(60, 247, 60);
+}
