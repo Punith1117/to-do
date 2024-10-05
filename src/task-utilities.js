@@ -1,5 +1,8 @@
 import { deleteTask } from ".";
 import { displayTasks } from "./display-tasks";
+import { formatDateDayFirst } from ".";
+import { formatDateYearFirst } from ".";
+
 export function handleDeleteTask(index) {
     let tasksArray = JSON.parse(localStorage.getItem('tasksArray'));
     let deleteTaskDialog = document.querySelector('.delete-dialog');
@@ -60,18 +63,4 @@ export function handleEditTask(index) {
         submitButton.removeEventListener('click', handleSubmitClick);
     }
     editTaskDialog.showModal();
-}
-
-function formatDateYearFirst(date) {
-    let year = date.slice(-4);
-    let month = date.slice(3,5);
-    let day = date.slice(0, 2);
-    return `${year}-${month}-${day}`;
-}
-
-function formatDateDayFirst(date) {
-    const day = date.slice(-2); // take last 2 digits
-    const month = date.slice(5,7);
-    const year = date.slice(0,4);
-    return `${day}-${month}-${year}`;
 }

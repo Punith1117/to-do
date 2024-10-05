@@ -1,5 +1,5 @@
 import { addTask } from ".";
-
+import { formatDateDayFirst } from ".";
 let inputDialog;
 let form;
 let cancelButton;
@@ -25,7 +25,7 @@ function handleSubmitButtonClick(event) {
         let dueDateInput = form.querySelector('.date-input');
         let priorityInput = form.querySelector('#options');
         let descriptionInput = form.querySelector('.description-input');
-        addTask(nameInput.value, formatDate(dueDateInput.value), priorityInput.value, descriptionInput.value);
+        addTask(nameInput.value, formatDateDayFirst(dueDateInput.value), priorityInput.value, descriptionInput.value);
         removeEventListeners();
         inputDialog.close();
     } else {
@@ -35,11 +35,4 @@ function handleSubmitButtonClick(event) {
 function removeEventListeners() {
     cancelButton.removeEventListener('click', handleCancelButtonClick);
     submitButton.removeEventListener('click', handleSubmitButtonClick);
-}
-
-function formatDate(date) {
-    const day = date.slice(-2); // Ensure 2 digits
-    const month = date.slice(5,7);
-    const year = date.slice(0,4);
-    return `${day}-${month}-${year}`;
 }
