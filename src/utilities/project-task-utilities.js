@@ -1,5 +1,5 @@
-import { deleteProjectTask, formatDateDayFirst, formatDateYearFirst } from ".";
-import { displayProjectTasks } from "./display-project-tasks";
+import { deleteProjectTask, formatDateDayFirst, formatDateYearFirst } from "..";
+import { displayProjectTasks } from "../display/display-project-tasks";
 
 export function handleDeleteProjectTask(projectIndex, taskIndex) {
     let projects = JSON.parse(localStorage.getItem('projectsArray'));

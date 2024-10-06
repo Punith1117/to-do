@@ -1,5 +1,5 @@
-import { addTaskToProject, formatDateDayFirst } from ".";
-import { displayProjectTasks } from "./display-project-tasks";
+import { addTaskToProject, formatDateDayFirst } from "..";
+import { displayProjectTasks } from "../display/display-project-tasks";
 
 export function handleAddProjectTask(projectIndex) {
     let addTaskDialog = document.querySelector('.add-dialog');

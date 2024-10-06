@@ -1,5 +1,5 @@
-import { addProject } from ".";
-import { formatDateDayFirst } from ".";
+import { addProject } from "../index";
+import { formatDateDayFirst } from "../index";
 
 export function handleAddProject() {
     let addProjectDialog = document.querySelector('.add-dialog');

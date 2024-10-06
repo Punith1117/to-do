@@ -1,8 +1,8 @@
-import { createAddDialog } from "./create-add-edit-dialog";
-import { createDeleteDialog } from "./create-delete-dialog";
-import { displayProjects } from "./display-projects";
-import { handleAddProjectTask } from "./handle-add-project-task";
-import { handleDeleteProjectTask, handleEditProjectTask } from "./project-task-utilities";
+import { createAddDialog } from "../create-add-edit-dialog.js";
+import { createDeleteDialog } from "../create-delete-dialog.js";
+import { displayProjects } from "../display/display-projects.js";
+import { handleAddProjectTask } from "../handle-add/handle-add-project-task.js";
+import { handleDeleteProjectTask, handleEditProjectTask } from "../utilities/project-task-utilities.js";
 
 export function displayProjectTasks(projectIndex) {
     let content = document.querySelector('.content');

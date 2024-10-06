@@ -1,7 +1,7 @@
-import { deleteProject } from ".";
-import { formatDateYearFirst } from ".";
-import { formatDateDayFirst } from ".";
-import { displayProjects } from "./display-projects";
+import { deleteProject } from "..";
+import { formatDateYearFirst } from "..";
+import { formatDateDayFirst } from "..";
+import { displayProjects } from "../display/display-projects";
 export function handleDeleteProject(index) {
     let projectsArray = JSON.parse(localStorage.getItem('projectsArray'));
     let deleteDialog = document.querySelector('.delete-dialog');

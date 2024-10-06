@@ -1,9 +1,9 @@
 import "./reset.css";
 import "./styles.css";
 
-import { displayTasks } from "./display-tasks";
-import { displayProjects } from "./display-projects";
-import { displayProjectTasks } from "./display-project-tasks";
+import { displayTasks } from "./display/display-tasks";
+import { displayProjects } from "./display/display-projects";
+import { displayProjectTasks } from "./display/display-project-tasks";
 
 let tabs = document.querySelectorAll('.tab');
 tabs.forEach((tab) => {

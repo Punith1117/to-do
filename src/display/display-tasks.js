@@ -1,8 +1,8 @@
-import { createAddDialog } from "./create-add-edit-dialog";
-import { createDeleteDialog } from "./create-delete-dialog";
-import { handleAddTask } from "./handle-add-task";
-import { handleDeleteTask } from "./task-utilities";
-import { handleEditTask } from "./task-utilities";
+import { createAddDialog } from "../create-add-edit-dialog";
+import { createDeleteDialog } from "../create-delete-dialog";
+import { handleAddTask } from "../handle-add/handle-add-task";
+import { handleDeleteTask } from "../utilities/task-utilities";
+import { handleEditTask } from "../utilities/task-utilities";
 
 export function displayTasks() {
     let content = document.querySelector('.content');

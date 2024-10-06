@@ -1,7 +1,7 @@
-import { deleteTask } from ".";
-import { displayTasks } from "./display-tasks";
-import { formatDateDayFirst } from ".";
-import { formatDateYearFirst } from ".";
+import { deleteTask } from "../index";
+import { displayTasks } from "../display/display-tasks";
+import { formatDateDayFirst } from "../index";
+import { formatDateYearFirst } from "../index";
 
 export function handleDeleteTask(index) {
     let tasksArray = JSON.parse(localStorage.getItem('tasksArray'));

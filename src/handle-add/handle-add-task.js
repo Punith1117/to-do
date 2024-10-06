@@ -1,5 +1,5 @@
-import { addTask } from ".";
-import { formatDateDayFirst } from ".";
+import { addTask } from "..";
+import { formatDateDayFirst } from "..";
 let inputDialog;
 let form;
 let cancelButton;
