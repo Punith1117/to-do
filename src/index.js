@@ -140,12 +140,3 @@ export function deleteProjectTask(projectIndex, taskIndex) {// project related, 
     displayProjectTasks(projectIndex);
 }
 
-function validTaskNum(num) {
-    let ta = JSON.parse(localStorage.getItem('tasksArray'));//get tasks array from storage
-    if ((num <= ta.length) && (num >= 1)) {
-        return true;
-    } else {
-        console.log('invalid task num');
-        return false;
-    }
-}
