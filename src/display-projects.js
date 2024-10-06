@@ -1,5 +1,6 @@
 import { createAddDialog } from "./create-add-edit-dialog";
 import { createDeleteDialog } from "./create-delete-dialog";
+import { displayProjectTasks } from "./display-project-tasks";
 import { handleAddProject } from "./handle-add-project";
 import { handleDeleteProject } from "./project-utilities";
 import { handleEditProject } from "./project-utilities";
@@ -50,6 +51,7 @@ export function displayProjects() {
                     let openButton = document.createElement('button');
                     openButton.className = 'open';
                     openButton.textContent = 'open'
+                    openButton.addEventListener('click', () => { displayProjectTasks(index)})
                 openSection.appendChild(openButton);
                 let editDeleteSection = document.createElement('div');
                 editDeleteSection.className = 'edit-delete-section';
