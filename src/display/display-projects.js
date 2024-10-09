@@ -11,6 +11,7 @@ export function displayProjects() {
     let addProjectButton = document.createElement('button');
     addProjectButton.type = 'button';
     addProjectButton.textContent = 'add Project';
+    addProjectButton.className = 'add';
     addProjectButton.addEventListener('click', () => {
         handleAddProject();
     })

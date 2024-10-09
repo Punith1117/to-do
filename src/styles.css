@@ -62,11 +62,15 @@ header {
     color: white;
     letter-spacing: 2px;
     &:hover {
-        cursor: pointer;
         text-shadow: 3px 3px 2px black;
     }
 }
 
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
 .tab[data-on-this-tab="true"] {
     background-image: url(./images-or-svgs/[CITYPNG.COM]GreenBrushStrokeGrungeEffectPNG2000x2000.png);
     background-position: center;
@@ -80,4 +84,21 @@ header {
 
 .low-priority {
     color: rgb(60, 247, 60);
+}
+
+div > div:has(.add) {
+    display: flex;
+    justify-content: center;
+}
+.add {
+    width: 6rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 0px;
+    background-image: url(./images-or-svgs/[CITYPNG.COM]DarkGreenBrushStrokeGrungeEffectPNG2000x2000.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 200%;
+    color: white;
+    padding: 10px;
 }
