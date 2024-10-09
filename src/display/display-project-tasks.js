@@ -15,7 +15,8 @@ export function displayProjectTasks(projectIndex) {
     let addButtonDiv = document.createElement('div');
         let addButton = document.createElement('button');
         addButton.className = 'add';
-        addButton.textContent = 'add task';
+        addButton.textContent = '+';
+        addButton.title = 'add task to project';
         addButton.addEventListener('click', () => { handleAddProjectTask(projectIndex) })
     addButtonDiv.appendChild(addButton);
     let tasksDiv = document.createElement('div');

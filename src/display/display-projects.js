@@ -10,8 +10,9 @@ export function displayProjects() {
     content.innerHTML = '';
     let addProjectButton = document.createElement('button');
     addProjectButton.type = 'button';
-    addProjectButton.textContent = 'add Project';
+    addProjectButton.textContent = '+';
     addProjectButton.className = 'add';
+    addProjectButton.title = 'add project'
     addProjectButton.addEventListener('click', () => {
         handleAddProject();
     })

@@ -11,8 +11,9 @@ export function displayTasks() {
 
     let addTaskButton = document.createElement('button');
     addTaskButton.type = 'button';
-    addTaskButton.textContent = 'add task';
+    addTaskButton.textContent = '+';
     addTaskButton.className = 'add';
+    addTaskButton.title = 'add simple-task';
     addTaskButton.addEventListener('click', () => {
         handleAddTask();
     });
