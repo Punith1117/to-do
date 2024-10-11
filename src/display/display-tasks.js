@@ -30,8 +30,10 @@ export function displayTasks() {
             let taskDiv = document.createElement('div');
             taskDiv.className = 'task';
             let taskNameDiv = document.createElement('div');
+            taskNameDiv.className = 'name-section';
             taskNameDiv.textContent = 'Name: ' + task.taskName;
             let taskDueDateDiv = document.createElement('div');
+            taskDueDateDiv.className = 'dueDate-section';
             taskDueDateDiv.textContent = 'Due Date: ' + task.dueDate;
             let taskPriorityDiv = document.createElement('div');
             taskPriorityDiv.className = 'priority-section';
@@ -44,15 +46,18 @@ export function displayTasks() {
             let taskDescriptionDiv;
             if (task.description != '') {
                 taskDescriptionDiv = document.createElement('div');
+                taskDescriptionDiv.className = 'description-section';
                 taskDescriptionDiv.textContent = 'Description: ' + task.description;
             }
             
             let utilityButtonsDiv = document.createElement('div');
             let editButton = document.createElement('button');
             editButton.textContent = 'edit';
+            editButton.className = 'edit';
             editButton.addEventListener('click', () => { handleEditTask(index) })
             let deleteButton = document.createElement('button');
             deleteButton.textContent = 'delete';
+            deleteButton.className = 'delete';
             deleteButton.addEventListener('click', () => { handleDeleteTask(index)});
             utilityButtonsDiv.appendChild(editButton);
             utilityButtonsDiv.appendChild(deleteButton);

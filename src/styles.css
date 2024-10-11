@@ -3,6 +3,12 @@
     src: url(./fonts/FingerPaint-Regular.ttf);
 }
 
+@font-face {
+    font-family: task-project-font;
+    /* src: url(./fonts/pigmentDEMO.otf); */
+    src: url(./fonts/DoubleFeature20.ttf);
+}
+
 body {
     background-image: url(./images-or-svgs/background-wall.jpg);
     background-repeat: no-repeat;
@@ -20,7 +26,7 @@ header {
     background-image: url(./images-or-svgs/vecteezy_blue-watercolor-stain-watercolor-background_21971395.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    min-width: 27rem;
+    min-width: 22rem;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -61,8 +67,10 @@ header {
     background-color: transparent;
     color: white;
     letter-spacing: 2px;
+    filter: blur(1px);
+    transition: filter 0.8s ease-out;
     &:hover {
-        text-shadow: 3px 3px 2px black;
+        filter: blur(0px);
     }
 }
 
@@ -71,19 +79,22 @@ button {
         cursor: pointer;
     }
 }
+
 .tab[data-on-this-tab="true"] {
     background-image: url(./images-or-svgs/[CITYPNG.COM]GreenBrushStrokeGrungeEffectPNG2000x2000.png);
     background-position: center;
     background-size: 110% 400%;
     background-repeat: no-repeat;
+    filter: blur(0px);
 }
+
 
 .high-priority {
     color: rgb(252, 55, 55);
 }
 
 .low-priority {
-    color: rgb(60, 247, 60);
+    color: rgb(70, 145, 40);
 }
 
 div > div:has(.add) {
@@ -101,11 +112,113 @@ div > div:has(.add) {
     background-position: center;
     background-size: 110% 400%;
     color: white;
-    font-weight: 900;
-    text-shadow: 2px 2px 3px white;
+    font-family: task-project-font;
     font-size: large;
     padding: 10px;
+    transition: filter 0.6s ease-out;
     &:hover {
-        filter: brightness(1.4);
+        filter: drop-shadow(0.7rem 0px 0px darkgreen);
+    }
+}
+
+.tasks-section, .projects-section {
+    display: grid;
+    margin: max(0.2rem, 2vw);
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 27rem));
+    gap: 2%;
+}
+
+.task, .project {
+    border-radius: 3rem;
+    padding: 2rem;
+    padding-left: min(10vw, 20%);
+    font-size: 1.5rem;
+    font-family: task-project-font;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url(images-or-svgs/crack-texture-png-free.png);
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.description-section {
+    font-size: 1.2rem;
+}
+
+.dueDate-section {
+    color: rgb(0, 89, 255);
+}
+
+.delete {
+    background-image: url(./images-or-svgs/red-paint-brush-stroke-7.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 0px;
+    background-color: transparent;
+    transition: filter 0.5s ease-out;
+    
+    &:hover {
+        filter: drop-shadow(0px 8px 0px rgb(223, 32, 25));
+    }
+}
+
+.edit {
+    background-image: url(./images-or-svgs/watercolor-brush-stroke-banner-orange-3.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 0px;
+    background-color: transparent;
+    margin-right: 10px;
+    transition: filter 0.5s ease-out;
+
+    &:hover {
+        filter: drop-shadow(0px 8px 0px rgb(255, 73, 23));
+    }
+}
+
+.open {
+    background-image: url(./images-or-svgs/blue-paint-brush-stroke-9.png);
+    background-color: transparent;
+    background-size: 120% 105%;
+    background-repeat: no-repeat;
+    border: 0px;
+    color: white;
+    letter-spacing: 2px;
+    transition: filter 0.5s ease-out;
+    &:hover {
+        filter: drop-shadow(0px 8px 0px rgb(19, 52, 161));
+    }
+}
+
+.project-name {
+    text-align: center;
+    background-image: url(./images-or-svgs/blue-paint-brush-stroke-9.png);
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: center;
+    font-family: header-font;
+    color: white;
+    padding: 5px;
+}
+
+.back-to-projects {
+    position: fixed;
+    bottom: 7rem;
+    margin-left: 43vw;
+    font-family: task-project-font;
+    background-image: url(./images-or-svgs/green-watercolor-splatter-11.png);
+    background-position: -3.5rem -1rem;
+    background-size: 190% 160%;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    height: 5.5rem;
+    width: 6rem;
+    transition: all 0.5s;
+    &:hover {
+        scale: 1.2;
+        filter: drop-shadow(8px 8px 5px black);
     }
 }
