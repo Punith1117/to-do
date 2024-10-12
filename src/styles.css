@@ -222,3 +222,128 @@ div > div:has(.add) {
         filter: drop-shadow(8px 8px 5px black);
     }
 }
+
+.add-dialog, .edit-dialog {
+    font-family: header-font;
+    align-self: center;
+    justify-self: center;
+    background-image: url(./images-or-svgs/add-dialog.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    border: none;
+    width: 70%;
+    height: 70%;
+    min-width: 50rem;
+    color: white;
+    text-align: center;
+    padding-top: 12rem;
+    transition: scale 0.5s ease-in, display 0.5s allow-discrete, overlay 0.5s allow-discrete;
+    scale: 4;
+    &[open] {
+        scale: 1;
+
+        @starting-style {
+            scale: 4
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    input {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid black;
+        color: white;
+    }
+
+    .buttons-section {
+        button {
+            background-color: transparent;
+            color: lightblue;
+            border: none;
+            transition: all 0.5s;
+            &:hover {
+                transform: translateY(5px);
+            }
+        }
+
+        .submit {
+            &:hover {
+                color: rgb(69, 255, 69);
+            }
+        }
+    }
+}
+
+.edit-dialog {
+    background-image: url(./images-or-svgs/edit-dialog.png);
+    padding-top: 15rem;
+    .buttons-section {
+        button {
+            background-color: transparent;
+            color: rgb(55, 135, 255);
+            border: none;
+        }
+    }
+}
+
+.delete-dialog {
+    align-self: center;
+    justify-self: center;
+    background-color: transparent;
+    border: none;
+    background-image: url(./images-or-svgs/delete-dialog.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 17rem;
+    min-width: 45rem;
+    font-size: 1.3rem;
+    font-family: header-font;
+    color: white;
+    transition: scale 0.5s ease-in, display 0.5s allow-discrete, overlay 0.5s allow-discrete;
+    scale: 5;
+
+    &[open] {
+        scale: 1;
+        @starting-style {
+            scale: 5;
+        }
+    }
+
+    .no, .yes {
+        background-color: transparent;
+        border: none;
+        text-shadow: 2px 2px 2px black;
+        transition: transform 0.6s;
+        &:hover {
+            transform: translateY(5px);
+        }
+    }
+
+    .yes {
+        &:hover {
+            color: rgb(172, 0, 0);
+        }
+    }
+
+    .no {
+        &:hover {
+            color: rgb(0, 132, 255);
+        }
+    }
+
+    div:has(.no) {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+}
