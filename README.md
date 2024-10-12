@@ -1,6 +1,9 @@
 # to-do
 Project11 in The Odin Project  
 
+What I learned:
+    npm scripts, module imports/exports
+
 credits:  
 -> reset.css from [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)  
 -> images:  
