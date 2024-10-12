@@ -47,7 +47,7 @@ if (retrieveTasks() !== null) {
     displayTasks();
 } else {
     tasks = [];
-    let defaultTask = new Task('Sleep', '01-01-2000', 'low', 'must do');
+    let defaultTask = new Task('Sleep', '01-01-2000', 'high', 'must do');
     tasks.push(defaultTask);
     localStorage.setItem('tasksArray', JSON.stringify(tasks));
     displayTasks();
@@ -61,7 +61,7 @@ function retrieveTasks() {
 }
 
 if (localStorage.getItem('projectsArray') == null) {
-    let newProject = new Project('hello project', '02-02-2024', 'low', 'no description');
+    let newProject = new Project('sample project', '02-02-2024', 'low', 'add task to this project by clicking \'open\' button below and \'+\' button later');
     projects.push(newProject);
     localStorage.setItem('projectsArray', JSON.stringify(projects));
     console.log('new project auto-created');
