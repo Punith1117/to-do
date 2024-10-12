@@ -140,3 +140,8 @@ export function deleteProjectTask(projectIndex, taskIndex) {// project related, 
     displayProjectTasks(projectIndex);
 }
 
+document.addEventListener('keydown', (e) => {
+    if (e.key == 'Escape' || e.key == 'Esc') {
+        e.preventDefault();
+    }
+})
